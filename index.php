@@ -6,7 +6,7 @@
 
 	if(empty($_COOKIE['username'])){
 		$_SESSION['enableDisplay'] = 0;
-		$_SESSION['user_info'] = 4;
+		$_SESSION['user_role'] = 4;
 	}
 	else{
 		$username = $_COOKIE['username'];
