@@ -1,6 +1,3 @@
-<?php
-	$cookie = new Cookies();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
