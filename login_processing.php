@@ -12,6 +12,7 @@
 		$result = $db_handle->runQuery($sql_query);
 		$num_rows = $db_handle->numRows($sql_query);
 		if ($num_rows==0) {
+			$_SESSION['err'] = "Login failed";
 			header ('location:index.php');
 		}else{
 			$_SESSION['displayname'] = $result[0]["fullname"];
@@ -24,6 +25,7 @@
 			} else {
 			    echo "Error: " . $sql_insert . "<br>";
 			}
+			$_SESSION['msg'] = "Login successfully";
 			header ('location:index.php');
 		}
 	}
